@@ -1,0 +1,6 @@
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DAO\bin\Debug\QuestionBank_DAO.dll
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DAO\bin\Debug\QuestionBank_DAO.pdb
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DAO\obj\Debug\QuestionBank_DAO.csproj.AssemblyReference.cache
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DAO\obj\Debug\QuestionBank_DAO.csproj.CoreCompileInputs.cache
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DAO\obj\Debug\QuestionBank_DAO.dll
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DAO\obj\Debug\QuestionBank_DAO.pdb
