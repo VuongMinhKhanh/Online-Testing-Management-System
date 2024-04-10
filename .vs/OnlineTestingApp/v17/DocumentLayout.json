@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|WindowsFormsApp1\\QuestionBank_GUI.csproj|c:\\users\\khanh\\desktop\\online-testing-management-system\\windowsformsapp1\\questionbankform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|WindowsFormsApp1\\QuestionBank_GUI.csproj|solutionrelative:windowsformsapp1\\questionbankform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|QuestionBank_GUI\\QuestionBank_GUI.csproj|c:\\users\\khanh\\desktop\\online-testing-management-system\\questionbank_gui\\popupquestionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|QuestionBank_GUI\\QuestionBank_GUI.csproj|solutionrelative:questionbank_gui\\popupquestionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4ACE1823-989C-4076-944F-E2D6185506A7}|OnlineTestingApp_DTO\\QuestionBank_DTO.csproj|c:\\users\\khanh\\desktop\\online-testing-management-system\\onlinetestingapp_dto\\subject_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4ACE1823-989C-4076-944F-E2D6185506A7}|OnlineTestingApp_DTO\\QuestionBank_DTO.csproj|solutionrelative:onlinetestingapp_dto\\subject_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|WindowsFormsApp1\\QuestionBank_GUI.csproj|c:\\users\\khanh\\desktop\\online-testing-management-system\\windowsformsapp1\\questionbankform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|WindowsFormsApp1\\QuestionBank_GUI.csproj|solutionrelative:windowsformsapp1\\questionbankform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|WindowsFormsApp1\\QuestionBank_GUI.csproj|c:\\users\\khanh\\desktop\\online-testing-management-system\\windowsformsapp1\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|WindowsFormsApp1\\QuestionBank_GUI.csproj|solutionrelative:windowsformsapp1\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{072EF61A-5949-45E0-A77A-D7D57BC410EC}|OnlineTestingApp_BUS\\QuestionBank_BUS.csproj|c:\\users\\khanh\\desktop\\online-testing-management-system\\onlinetestingapp_bus\\subject_bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{072EF61A-5949-45E0-A77A-D7D57BC410EC}|OnlineTestingApp_BUS\\QuestionBank_BUS.csproj|solutionrelative:onlinetestingapp_bus\\subject_bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE0B72F7-4EEA-4954-AD8B-EC9355FE9539}|OnlineTestingApp_DAO\\QuestionBank_DAO.csproj|c:\\users\\khanh\\desktop\\online-testing-management-system\\onlinetestingapp_dao\\subject_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE0B72F7-4EEA-4954-AD8B-EC9355FE9539}|OnlineTestingApp_DAO\\QuestionBank_DAO.csproj|solutionrelative:onlinetestingapp_dao\\subject_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|QuestionBank_GUI\\QuestionBank_GUI.csproj|c:\\users\\khanh\\desktop\\online-testing-management-system\\questionbank_gui\\questionbankform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F162A1A-15DB-4F74-85E2-BAC7F2763BBC}|QuestionBank_GUI\\QuestionBank_GUI.csproj|solutionrelative:questionbank_gui\\questionbankform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "utils.cs",
-              "DocumentMoniker": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\WindowsFormsApp1\\utils.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\utils.cs",
-              "ToolTip": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\WindowsFormsApp1\\utils.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\utils.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA4AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T04:01:10.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QuestionBankForm.cs",
-              "DocumentMoniker": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\WindowsFormsApp1\\QuestionBankForm.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\QuestionBankForm.cs",
-              "ToolTip": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\WindowsFormsApp1\\QuestionBankForm.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\QuestionBankForm.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T02:51:29.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QuestionBankForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\WindowsFormsApp1\\QuestionBankForm.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\QuestionBankForm.cs",
-              "ToolTip": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\WindowsFormsApp1\\QuestionBankForm.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp1\\QuestionBankForm.cs [Design]",
+              "Title": "PopupQuestionForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\QuestionBank_GUI\\PopupQuestionForm.cs",
+              "RelativeDocumentMoniker": "QuestionBank_GUI\\PopupQuestionForm.cs",
+              "ToolTip": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\QuestionBank_GUI\\PopupQuestionForm.cs [Design]",
+              "RelativeToolTip": "QuestionBank_GUI\\PopupQuestionForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T02:51:25.051Z",
+              "WhenOpened": "2024-04-10T08:44:09.683Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Subject_DTO.cs",
-              "DocumentMoniker": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\OnlineTestingApp_DTO\\Subject_DTO.cs",
-              "RelativeDocumentMoniker": "OnlineTestingApp_DTO\\Subject_DTO.cs",
-              "ToolTip": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\OnlineTestingApp_DTO\\Subject_DTO.cs",
-              "RelativeToolTip": "OnlineTestingApp_DTO\\Subject_DTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
+              "Title": "QuestionBankForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\QuestionBank_GUI\\QuestionBankForm.cs",
+              "RelativeDocumentMoniker": "QuestionBank_GUI\\QuestionBankForm.cs",
+              "ToolTip": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\QuestionBank_GUI\\QuestionBankForm.cs [Design]",
+              "RelativeToolTip": "QuestionBank_GUI\\QuestionBankForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T02:45:45.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Subject_DAO.cs",
-              "DocumentMoniker": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\OnlineTestingApp_DAO\\Subject_DAO.cs",
-              "RelativeDocumentMoniker": "OnlineTestingApp_DAO\\Subject_DAO.cs",
-              "ToolTip": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\OnlineTestingApp_DAO\\Subject_DAO.cs",
-              "RelativeToolTip": "OnlineTestingApp_DAO\\Subject_DAO.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAEwBQAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T02:44:55.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Subject_BUS.cs",
-              "DocumentMoniker": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\OnlineTestingApp_BUS\\Subject_BUS.cs",
-              "RelativeDocumentMoniker": "OnlineTestingApp_BUS\\Subject_BUS.cs",
-              "ToolTip": "C:\\Users\\Khanh\\Desktop\\Online-Testing-Management-System\\OnlineTestingApp_BUS\\Subject_BUS.cs",
-              "RelativeToolTip": "OnlineTestingApp_BUS\\Subject_BUS.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAqwBEAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T02:27:34.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-10T08:44:06.681Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
