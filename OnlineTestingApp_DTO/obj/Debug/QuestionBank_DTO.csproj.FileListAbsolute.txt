@@ -1,9 +1,0 @@
-C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DTO\bin\Debug\QuestionBank_DTO.dll
-C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DTO\bin\Debug\QuestionBank_DTO.pdb
-C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DTO\bin\Debug\QuestionBank_DAO.dll
-C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DTO\bin\Debug\QuestionBank_DAO.pdb
-C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DTO\obj\Debug\QuestionBank_DTO.csproj.AssemblyReference.cache
-C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DTO\obj\Debug\QuestionBank_DTO.csproj.CoreCompileInputs.cache
-C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DTO\obj\Debug\Question.2EC8D9C7.Up2Date
-C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DTO\obj\Debug\QuestionBank_DTO.dll
-C:\Users\Khanh\Desktop\Online-Testing-Management-System\OnlineTestingApp_DTO\obj\Debug\QuestionBank_DTO.pdb
