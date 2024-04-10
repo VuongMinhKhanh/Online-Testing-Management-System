@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using QuestionBank_DAO;
+using QuestionBank_DTO;
+
+namespace QuestionBank_BUS
+{
+    public class Subject_BUS
+    {
+        Subject_DAO subject = new Subject_DAO();
+
+        public DataTable getSubjects()
+        {
+            return subject.getSubjects();
+        }
+    }
+}
