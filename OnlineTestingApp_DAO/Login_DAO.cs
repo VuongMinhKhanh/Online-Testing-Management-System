@@ -19,5 +19,32 @@ namespace QuestionBank_DAO
 
             return dtUser;
         }
+
+        public bool CheckLogin(string username, string password, string userRole)
+        {
+            string query = "SELECT COUNT(*) FROM Account WHERE Username = @Username AND Password = @Password AND UserRole = @UserRole";
+
+            conn.Open();
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+                    command.Parameters.AddWithValue("@UserRole", userRole);
+
+                    try
+                    {
+                        conn.Open();
+                        int count = (int)command.ExecuteScalar();
+                        return count > 0; // Trả về true nếu có tài khoản tồn tại trong cơ sở dữ liệu
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                        return false; // Trả về false nếu có lỗi xảy ra trong quá trình kiểm tra đăng nhập
+                    }
+                }
+            }
+        }
     }
 }
