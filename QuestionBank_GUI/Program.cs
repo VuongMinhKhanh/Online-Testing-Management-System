@@ -16,7 +16,7 @@ namespace QuestionBank_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuestionBankForm());
+            Application.Run(new TestForm());
         }
     }
 }

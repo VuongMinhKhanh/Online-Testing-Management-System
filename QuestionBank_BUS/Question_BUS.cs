@@ -37,5 +37,11 @@ namespace QuestionBank_BUS
         {
             return this.question.deleteQuestion(question);
         }
+
+        public DataTable getRandomQuestions(int questionNumber,
+            string idSubject)
+        {
+            return question.getRandomQuestions(questionNumber, idSubject);
+        } 
     }
 }
