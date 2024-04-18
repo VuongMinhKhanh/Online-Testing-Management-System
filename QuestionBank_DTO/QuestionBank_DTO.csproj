@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Question_DTO.cs" />
+    <Compile Include="Score_DTO.cs" />
     <Compile Include="Subject_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

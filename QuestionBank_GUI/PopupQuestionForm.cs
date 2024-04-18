@@ -101,7 +101,7 @@ namespace QuestionBank_GUI
 
             //MessageBox.Show((txtAnswer1.Text == "").ToString());
 
-            if (!utils.IsValidQuestion(
+            if (!Utils.IsValidQuestion(
                 txtQuestion,
                 txtAnswer1, rdAnswer1,
                 txtAnswer2, rdAnswer2,

@@ -15,10 +15,10 @@ namespace QuestionBank_GUI
 {
     public partial class QuestionBankForm : Form
     {
-        Subject_BUS subject_bus = new Subject_BUS();
-        Question_BUS question_bus = new Question_BUS();
-        DataRow[] drSubjects;
-        DataRow[] drQuestions;
+        private Subject_BUS subject_bus = new Subject_BUS();
+        private Question_BUS question_bus = new Question_BUS();
+        private DataRow[] drSubjects;
+        private DataRow[] drQuestions;
         public QuestionBankForm()
         {
             InitializeComponent();
@@ -49,7 +49,7 @@ namespace QuestionBank_GUI
         private void Form1_Load(object sender, EventArgs e)
         {
             drSubjects = subject_bus.getId_Subjects().Select();
-            utils.LoadSubjects(cbSubject, drSubjects, "ten_mon_hoc");
+            Utils.LoadSubjects(cbSubject, drSubjects, "ten_mon_hoc");
 
             cbSubject_SelectedIndexChanged(sender, e);
             cbSubject.SelectedIndex = 0;
@@ -71,7 +71,7 @@ namespace QuestionBank_GUI
         private void reloadQuestions()
         {
             drQuestions = question_bus.getQuestions(cbSubject.Tag.ToString()).Select();
-            utils.LoadQuestions(listQuestion, drQuestions, "id_CauHoi", "cau_hoi", "cau_tra_loi", txtQuestionFilter.Text);
+            Utils.LoadQuestions(listQuestion, drQuestions, "id_CauHoi", "cau_hoi", "cau_tra_loi", txtQuestionFilter.Text);
         }
 
         private void cbSubject_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,19 +84,19 @@ namespace QuestionBank_GUI
             reloadQuestions();
         }
 
-        private Question_DTO getQuestion()
+        private Question_DTO GetQuestionFromPopUp()
         {
             int idQuestion = int.Parse(listQuestion.SelectedItems[0].Tag.ToString());
 
             DataRow[] drAnswers = question_bus.getAnswers(idQuestion).Select();
             DataRow[] drQuestion = question_bus.getQuestions(cbSubject.Tag.ToString()).Select($"id_CauHoi = {idQuestion}");
 
-            return utils.GetQuestion(drQuestion, drAnswers, cbSubject.Tag.ToString());
+            return Utils.GetQuestion(drQuestion, drAnswers, cbSubject.Tag.ToString());
         }
 
         private void PopupQuestionForm()
         {
-            Question_DTO question = getQuestion();
+            Question_DTO question = GetQuestionFromPopUp();
 
             PopupQuestionForm popUpForm = new PopupQuestionForm(cbSubject.Tag.ToString(), question);
             popUpForm.ShowDialog();
@@ -112,8 +112,6 @@ namespace QuestionBank_GUI
             if (listQuestion.SelectedItems.Count > 0)
             {
                 PopupQuestionForm();
-
-                
             }
             else
             {
@@ -141,7 +139,7 @@ namespace QuestionBank_GUI
                 MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    Question_DTO question = getQuestion();
+                    Question_DTO question = GetQuestionFromPopUp();
                     //MessageBox.Show(question.IdQuestion
                     //    + " " + question.IdAnswers[0]
                     //    + " " + question.IdCorrectAnswer);
@@ -160,7 +158,7 @@ namespace QuestionBank_GUI
 
         private void txtQuestionFilter_TextChanged(object sender, EventArgs e)
         {
-            utils.LoadQuestions(listQuestion, drQuestions, "id_CauHoi", "cau_hoi", "cau_tra_loi", txtQuestionFilter.Text);
+            Utils.LoadQuestions(listQuestion, drQuestions, "id_CauHoi", "cau_hoi", "cau_tra_loi", txtQuestionFilter.Text);
         }
     }
 }

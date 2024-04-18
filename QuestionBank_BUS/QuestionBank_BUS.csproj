@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Question_BUS.cs" />
+    <Compile Include="Score_BUS.cs" />
     <Compile Include="Subject_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

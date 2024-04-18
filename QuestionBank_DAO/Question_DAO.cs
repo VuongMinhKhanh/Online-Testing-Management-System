@@ -73,6 +73,42 @@ namespace QuestionBank_DAO
             }
         }
 
+        public DataTable getRandomQuestions(int questionNumber, string idSubject)
+        {
+            conn.Open();
+
+            string sqlCmd;
+            SqlDataAdapter da;
+
+            try
+            {
+                sqlCmd = "SELECT ch.id_CauHoi, cau_hoi, cth.id_ChiTietCauHoi, cau_tra_loi, id_DapAn " +
+                    "FROM ( " +
+                    $"SELECT TOP {questionNumber} * FROM CauHoi " +
+                    $"Where id_MonHoc = '{idSubject}' " +
+                    "ORDER BY NEWID() " +
+                    ") AS ch " +
+                    "JOIN ChiTietCauHoi cth ON ch.id_CauHoi = cth.id_CauHoi " +
+                    "LEFT JOIN DapAn da ON cth.id_ChiTietCauHoi = da.id_ChiTietCauHoi; ";
+
+                da = new SqlDataAdapter(sqlCmd, conn);
+                DataTable dtSubject = new DataTable();
+
+                da.Fill(dtSubject);
+
+                return dtSubject;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return new DataTable();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public bool addQuestion(Question_DTO question)
         {
             conn.Open();
