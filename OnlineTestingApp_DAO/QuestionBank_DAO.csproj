@@ -40,7 +40,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Include="DBConnect.cs" />
     <Compile Include="HomePage_Student_DAO.cs" />
