@@ -48,7 +48,7 @@
     <Compile Include="Manage_Users_DTO.cs" />
     <Compile Include="Subject_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+  </ItemGroup> 
   <ItemGroup>
     <ProjectReference Include="..\OnlineTestingApp_DAO\QuestionBank_DAO.csproj">
       <Project>{ee0b72f7-4eea-4954-ad8b-ec9355fe9539}</Project>
