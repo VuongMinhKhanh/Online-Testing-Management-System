@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup> 
     <Compile Include="HomePage_Admin_DTO.cs" />
-    <Compile Include="HomePage_Student_DTO.cs" />
+    <Compile Include="HomePage_Student_DTO.cs" /> 
     <Compile Include="HomePage_Teacher_DTO.cs" />
     <Compile Include="Login_DTO.cs" />
     <Compile Include="Manage_Users_DTO.cs" />
