@@ -42,7 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="HomePage_Student_DAO.cs" />
+    <Compile Include="HomePage_Teacher_DAO.cs" />
+    <Compile Include="HomePage__Admin_DAO.cs" />
     <Compile Include="Login_DAO.cs" />
+    <Compile Include="Manage_Users_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Subject_DAO.cs" />
   </ItemGroup>
