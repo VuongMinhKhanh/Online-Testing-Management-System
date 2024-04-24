@@ -51,7 +51,7 @@ namespace QuestionBank_GUI
             drSubjects = subject_bus.getId_Subjects().Select();
             Utils.LoadSubjects(cbSubject, drSubjects, "ten_mon_hoc");
 
-            cbSubject_SelectedIndexChanged(sender, e);
+            //cbSubject_SelectedIndexChanged(sender, e);
             cbSubject.SelectedIndex = 0;
             cbSubject.Tag = drSubjects[0]["id_MonHoc"];
             cbSubject.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -64,11 +64,11 @@ namespace QuestionBank_GUI
             popUpForm.ShowDialog();
 
             if (popUpForm.DialogResult == DialogResult.OK)
-                reloadQuestions();
+                ReloadQuestions();
             //MessageBox.Show("updated");
         }
 
-        private void reloadQuestions()
+        private void ReloadQuestions()
         {
             drQuestions = question_bus.getQuestions(cbSubject.Tag.ToString()).Select();
             Utils.LoadQuestions(listQuestion, drQuestions, "id_CauHoi", "cau_hoi", "cau_tra_loi", txtQuestionFilter.Text);
@@ -77,11 +77,9 @@ namespace QuestionBank_GUI
         private void cbSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbSubject.SelectedIndex != -1)
-            {
                 cbSubject.Tag = drSubjects[cbSubject.SelectedIndex]["id_MonHoc"];
-            }
 
-            reloadQuestions();
+            ReloadQuestions();
         }
 
         private Question_DTO GetQuestionFromPopUp()
@@ -102,7 +100,7 @@ namespace QuestionBank_GUI
             popUpForm.ShowDialog();
 
             if (popUpForm.DialogResult == DialogResult.OK)
-                reloadQuestions();
+                ReloadQuestions();
             //popUpForm.Dispose();
 
         }
@@ -125,7 +123,7 @@ namespace QuestionBank_GUI
 
             //txtQuestionFilter_TextChanged(sender, e);
 
-            reloadQuestions();
+            ReloadQuestions();
             //MessageBox.Show("updated");
         }
 
@@ -147,7 +145,7 @@ namespace QuestionBank_GUI
                     {
                         MessageBox.Show("Delete successfully!");
 
-                        reloadQuestions();
+                        ReloadQuestions();
                     }
                 }
             }

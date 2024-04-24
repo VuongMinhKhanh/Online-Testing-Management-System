@@ -23,6 +23,8 @@ namespace QuestionBank_DAO
             {
                 try
                 {
+                    conn.Open();
+
                     dataAdapter = new SqlDataAdapter(sql, conn);
                     commandBuilder = new SqlCommandBuilder(dataAdapter);
 
@@ -45,6 +47,44 @@ namespace QuestionBank_DAO
                     return false;
                 }
             }
+        }
+        public DataTable getScores(string subjectId, int semester, int year)
+        {
+            string sql = "Select diem, Count(id_diem) as Qty " +
+                "From Diem " +
+                "Join SinhVien_LopHoc on id_sv = Id_MSSV " +
+                "Join LopHoc_MonHoc on Id_Lop = Id_LopHoc " +
+                $"Where LopHoc_MonHoc.id_MonHoc = '{subjectId}' " +
+                "And Diem.id_MonHoc = LopHoc_MonHoc.id_MonHoc " +
+                $"And HocKy = {semester} and NamHoc = {year} " +
+                "Group By diem " +
+                "Order By Count(id_diem)";
+
+            SqlDataAdapter dataAdapter;
+            SqlCommandBuilder commandBuilder;
+            DataSet dataSet = new DataSet();
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                conn.Open();
+
+                dataAdapter = new SqlDataAdapter(sql, conn);
+                commandBuilder = new SqlCommandBuilder(dataAdapter);
+
+                dataAdapter.Fill(dataSet, "Diem");
+
+                return dataSet.Tables[0];
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return dataTable;
+            }
+            finally
+            {
+                conn.Close();
+            }   
         }
     }
 }

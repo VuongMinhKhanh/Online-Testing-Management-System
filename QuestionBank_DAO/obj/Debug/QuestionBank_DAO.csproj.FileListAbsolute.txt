@@ -16,3 +16,6 @@ C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DAO\obj\Deb
 C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DAO\obj\Debug\Question.E4FBA048.Up2Date
 C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DAO\obj\Debug\QuestionBank_DAO.dll
 C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DAO\obj\Debug\QuestionBank_DAO.pdb
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DAO\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DAO\bin\Debug\itextsharp.dll
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DAO\bin\Debug\itextsharp.xml

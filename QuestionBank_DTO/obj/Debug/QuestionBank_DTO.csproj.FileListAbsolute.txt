@@ -13,3 +13,7 @@ C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DTO\obj\Deb
 C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DTO\obj\Debug\QuestionBank_DTO.csproj.CoreCompileInputs.cache
 C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DTO\obj\Debug\QuestionBank_DTO.dll
 C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DTO\obj\Debug\QuestionBank_DTO.pdb
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DTO\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DTO\bin\Debug\itextsharp.dll
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DTO\bin\Debug\itextsharp.xml
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_DTO\obj\Debug\Question.2EC8D9C7.Up2Date
