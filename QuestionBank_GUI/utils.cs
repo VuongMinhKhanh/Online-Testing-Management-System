@@ -1,22 +1,27 @@
-﻿using QuestionBank_DTO;
+﻿using iTextSharp.text.pdf;
+using iTextSharp.text;
+using QuestionBank_DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Forms.VisualStyles;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace QuestionBank_GUI
 {
     public static class Utils
     {
         private static Random rng = new Random();
-
         public static void LoadSubjects(ComboBox comboBox, DataRow[] dr, string columnName)
         {
             foreach (DataRow dr2 in dr)
@@ -32,7 +37,7 @@ namespace QuestionBank_GUI
             foreach (DataRow dr2 in dr)
             {
                 ListViewItem item = new ListViewItem(new string[] { dr2[questionColumn].ToString(), dr2[answerColumn].ToString() });
-                item.Font = new Font("arial", 12, FontStyle.Regular);
+                item.Font = new System.Drawing.Font("arial", 12, FontStyle.Regular);
                 item.Tag = dr2[idColumn].ToString();
                 listView.Items.Add(item);
             }
@@ -47,7 +52,7 @@ namespace QuestionBank_GUI
                 if (dr2[questionColumn].ToString().StartsWith(keyword))
                 {
                     ListViewItem item = new ListViewItem(new string[] { dr2[questionColumn].ToString(), dr2[answerColumn].ToString() });
-                    item.Font = new Font("arial", 12, FontStyle.Regular);
+                    item.Font = new System.Drawing.Font("arial", 12, FontStyle.Regular);
                     item.Tag = dr2[idColumn].ToString();
                     listView.Items.Add(item);
                 }
@@ -211,7 +216,7 @@ namespace QuestionBank_GUI
                     Width = containerControl.Width,
                     Tag = int.Parse(dr["id_ChiTietCauHoi"].ToString()),
                 };
-                //rd.Click += Rd_Click;
+                //rd.CheckedChanged += Rd_CheckedChanged;
                 rdList.Add(rd);
                 //flpInner.Controls.Add(rd);
                 answerIndex++;
@@ -226,6 +231,12 @@ namespace QuestionBank_GUI
             }
                 
         }
+
+        private static void Rd_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         public static void Shuffle<T>(this IList<T> list)
         {
             int n = list.Count;
@@ -302,6 +313,131 @@ namespace QuestionBank_GUI
 
             return score_dto;
         }
+        public static void UpdateProgressBarValue(ProgressBar bar, int count)
+        {
 
+        }
+        public static int CountCompletedAnsers(List<GroupBox> gbList)
+        {
+            int count = 0;
+
+            foreach (GroupBox gb in gbList)
+                if (gb.Controls[0].Controls.OfType<RadioButton>()
+                .FirstOrDefault(rb => rb.Checked) != null)
+                    count++;
+
+            return count;
+        }
+        public static void LoadScores(Chart chart, DataRow[] drScores)
+        {
+            chart.ChartAreas.Clear();
+            chart.Series.Clear();
+            ChartArea chartArea = new ChartArea();
+            chart.ChartAreas.Add(chartArea);
+
+            chartArea.AxisX.Title = "Test score";
+            chartArea.AxisY.Title = "Number of Students";
+            chartArea.AxisX.MajorGrid.LineColor = Color.LightGray;
+            chartArea.AxisY.MajorGrid.LineColor = Color.LightGray;
+
+            // Add and configure series
+            Series series = new Series
+            {
+                Name = "Score Series",
+                ChartType = SeriesChartType.Line,
+                BorderWidth = 3,
+                Color = Color.Blue, // Line color
+                BackGradientStyle = GradientStyle.TopBottom,
+                BackSecondaryColor = Color.LightBlue, // Choose a secondary color for the gradient
+            };
+
+            // Enable markers
+            series.MarkerStyle = MarkerStyle.Diamond;
+            series.MarkerSize = 10;
+            series.MarkerColor = Color.Blue;
+
+            chart.Series.Add(series);
+
+            // Add data points here
+            foreach (DataRow dr in drScores)
+                series.Points.AddXY(double.Parse(dr["diem"].ToString()), int.Parse(dr["Qty"].ToString()));
+
+            chart.Invalidate();
+
+        }
+        public static int extractSchoolYear(string schoolYear)
+        {
+            return int.Parse(schoolYear.Split('-')[0]);
+        }
+
+        private static MemoryStream ChartToImage(Chart chart)
+        {
+            MemoryStream ms = new MemoryStream();
+            chart.SaveImage(ms, ChartImageFormat.Png);
+            ms.Seek(0, SeekOrigin.Begin);
+
+            return ms;
+        }
+
+        public static void ExportChartToPdf(Chart chart, string filePath,
+            string subjectName, int semester, string schoolYear)
+        {
+            // Convert chart to an image
+            MemoryStream chartImageStream = ChartToImage(chart);
+
+            // Create a PDF document
+            Document document = new Document(PageSize.A4, 50, 50, 50, 50);
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
+            document.Open();
+
+            // Add title
+            //string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "DejaVuSans.ttf");
+            string fontPath = Application.StartupPath + "\\fonts\\DejaVuSans.ttf";
+            BaseFont bfSansUni = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+            iTextSharp.text.Font titleFont = new iTextSharp.text.Font(bfSansUni, 18, iTextSharp.text.Font.BOLD);
+
+            string title = $"Score Report for subject {subjectName} in semester {semester} in {schoolYear}";
+            //iTextSharp.text.Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18);
+            Paragraph titleParagraph = new Paragraph(title, titleFont)
+            {
+                Alignment = Element.ALIGN_CENTER,
+                SpacingAfter = 20
+            };
+            document.Add(titleParagraph);
+
+            // Add summary
+            string summary = "Dear Falcuty Board,\n...";
+            iTextSharp.text.Font textFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
+            Paragraph summaryParagraph = new Paragraph(summary, textFont)
+            {
+                SpacingAfter = 20
+            };
+            document.Add(summaryParagraph);
+
+            // Add the chart image
+            iTextSharp.text.Image chartImage = iTextSharp.text.Image.GetInstance(chartImageStream.ToArray());
+            chartImage.Alignment = iTextSharp.text.Image.ALIGN_CENTER;
+            chartImage.ScaleToFit(document.PageSize.Width - 100, document.PageSize.Height - 300); // Adjusted to leave space for signature
+            document.Add(chartImage);
+
+            // Signature area
+            iTextSharp.text.Font signatureFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
+            Paragraph signatureParagraph = new Paragraph("Signature:\n\n\n", signatureFont);
+            signatureParagraph.SpacingBefore = 25;
+            signatureParagraph.IndentationLeft = 50;
+            document.Add(signatureParagraph);
+
+            // Footer
+            iTextSharp.text.Font footerFont = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+            Paragraph footerParagraph = new Paragraph("Report generated on: " + DateTime.Now.ToString("yyyy-MM-dd"), footerFont)
+            {
+                Alignment = Element.ALIGN_CENTER,
+                SpacingBefore = 25
+            };
+            document.Add(footerParagraph);
+
+            // Close document
+            document.Close();
+        }
     }
 }

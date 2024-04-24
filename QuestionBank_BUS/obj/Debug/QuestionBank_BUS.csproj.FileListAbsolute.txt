@@ -20,3 +20,6 @@ C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_BUS\obj\Deb
 C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_BUS\obj\Debug\Question.32261AEC.Up2Date
 C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_BUS\obj\Debug\QuestionBank_BUS.dll
 C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_BUS\obj\Debug\QuestionBank_BUS.pdb
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_BUS\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_BUS\bin\Debug\itextsharp.dll
+C:\Users\Khanh\Desktop\Online-Testing-Management-System\QuestionBank_BUS\bin\Debug\itextsharp.xml

@@ -21,6 +21,7 @@ namespace QuestionBank_GUI
         private Score_BUS score_bus = new Score_BUS();
         private int questionNumber = 4;
         private string idSubject = "ITEC3406";
+        private string subjectName = "Lập trình cơ sở dữ liệu";
         private string idStudent = "001";
         private Dictionary<string, int> answerDict;
         private List<GroupBox> questionList = new List<GroupBox>();
@@ -32,18 +33,19 @@ namespace QuestionBank_GUI
         {
             InitializeComponent();
         }
-        public TestForm(string idStudent, string idSubject)
+        public TestForm(string idStudent, string idSubject, string subjectName)
         {
             InitializeComponent();
 
             this.idStudent = idStudent;
             this.idSubject = idSubject;
+            this.subjectName = subjectName;
         }
         private void TestForm_Load(object sender, EventArgs e)
         {
             //questionNumber = 4;
             //idSubject = "ITEC3406";
-            Text += " " + idSubject;
+            Text += " " + subjectName;
 
             DataRow[] drQuestions = question_bus.getRandomQuestions(questionNumber, idSubject).Select();
             questionList = new List<GroupBox>();
@@ -61,7 +63,7 @@ namespace QuestionBank_GUI
             answerDict = Utils.getListOfCorrectAnswers(drQuestions);
             Button btnSubmit = new Button()
             {
-                Text = "Finish!",
+                Text = "Hoàn thành!",
                 Height = 50,
                 Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0),
                 UseVisualStyleBackColor = false,
@@ -75,7 +77,9 @@ namespace QuestionBank_GUI
             btnSubmit.MouseLeave += BtnSubmit_MouseLeave;
 
             flpForm.Controls.Add(btnSubmit);
-            //MessageBox.Show(questionList[0].Controls[0].Controls[0].Text.ToString());
+
+            //pbAnswer.Maximum = questionList.Count;
+            //pbAnswer.Value = 0;
         }
 
         private void BtnSubmit_MouseLeave(object sender, EventArgs e)
@@ -127,20 +131,26 @@ namespace QuestionBank_GUI
 
         private void listQuestions_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Clear existing RadioButtons
-            //gbAnswers.Controls.Clear();
-            // Dynamically create and bind RadioButtons for the answers
-            //for (int i = 0; i < selectedQuestion.Answers.Count; i++)
-            //{
-            //    RadioButton radioButton = new RadioButton();
-            //    radioButton.Text = selectedQuestion.Answers[i];
-            //    radioButton.Location = new Point(10, i * 20 + 20); // Adjust as needed
-            //    radioButton.Size = new Size(200, 17); // Adjust as needed
-            //    gbAnswers.Controls.Add(radioButton);
-            //}
+            
         }
 
         private void gbAnswers_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TestForm_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void flpForm_Click(object sender, EventArgs e)
+        {
+            //int percentage = (int)((double)Utils.CountCompletedAnsers(questionList) / pbAnswer.Maximum * 100);
+            //lbProgress.Text = $"Progress: {percentage}%";
+        }
+
+        private void flpForm_Paint(object sender, PaintEventArgs e)
         {
 
         }
