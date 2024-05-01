@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             this.lbTittle = new System.Windows.Forms.Label();
+            this.rtxtQuyCheThi = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dateNgayThi = new System.Windows.Forms.DateTimePicker();
-            this.cbGioThi = new System.Windows.Forms.ComboBox();
-            this.cbMaLop = new System.Windows.Forms.ComboBox();
-            this.cbMaMon = new System.Windows.Forms.ComboBox();
+            this.cbCaThi = new System.Windows.Forms.ComboBox();
+            this.cbLopHocMonHoc = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btExit = new System.Windows.Forms.Button();
             this.btConfirm = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLichThi = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtThoiGianThi = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbTittle
@@ -51,10 +55,29 @@
             this.lbTittle.Location = new System.Drawing.Point(0, 0);
             this.lbTittle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTittle.Name = "lbTittle";
-            this.lbTittle.Size = new System.Drawing.Size(699, 78);
+            this.lbTittle.Size = new System.Drawing.Size(1018, 78);
             this.lbTittle.TabIndex = 21;
             this.lbTittle.Text = "Chỉnh sửa lịch thi";
             this.lbTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rtxtQuyCheThi
+            // 
+            this.rtxtQuyCheThi.Location = new System.Drawing.Point(511, 155);
+            this.rtxtQuyCheThi.Name = "rtxtQuyCheThi";
+            this.rtxtQuyCheThi.Size = new System.Drawing.Size(276, 275);
+            this.rtxtQuyCheThi.TabIndex = 33;
+            this.rtxtQuyCheThi.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(506, 111);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 27);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Quy chế thi:";
             // 
             // dateNgayThi
             // 
@@ -62,98 +85,76 @@
             this.dateNgayThi.CustomFormat = "dd/MM/yyyy";
             this.dateNgayThi.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayThi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayThi.Location = new System.Drawing.Point(113, 233);
+            this.dateNgayThi.Location = new System.Drawing.Point(102, 295);
             this.dateNgayThi.Name = "dateNgayThi";
             this.dateNgayThi.Size = new System.Drawing.Size(166, 34);
-            this.dateNgayThi.TabIndex = 29;
+            this.dateNgayThi.TabIndex = 31;
             // 
-            // cbGioThi
+            // cbCaThi
             // 
-            this.cbGioThi.FormattingEnabled = true;
-            this.cbGioThi.Items.AddRange(new object[] {
+            this.cbCaThi.FormattingEnabled = true;
+            this.cbCaThi.Items.AddRange(new object[] {
             "7:30",
             "9:45",
             "13:00",
             "15:30",
             "18:00"});
-            this.cbGioThi.Location = new System.Drawing.Point(425, 233);
-            this.cbGioThi.Name = "cbGioThi";
-            this.cbGioThi.Size = new System.Drawing.Size(166, 28);
-            this.cbGioThi.TabIndex = 28;
+            this.cbCaThi.Location = new System.Drawing.Point(312, 295);
+            this.cbCaThi.Name = "cbCaThi";
+            this.cbCaThi.Size = new System.Drawing.Size(166, 28);
+            this.cbCaThi.TabIndex = 30;
             // 
-            // cbMaLop
+            // cbLopHocMonHoc
             // 
-            this.cbMaLop.FormattingEnabled = true;
-            this.cbMaLop.Items.AddRange(new object[] {
-            "DH21IT01"});
-            this.cbMaLop.Location = new System.Drawing.Point(425, 140);
-            this.cbMaLop.Name = "cbMaLop";
-            this.cbMaLop.Size = new System.Drawing.Size(166, 28);
-            this.cbMaLop.TabIndex = 27;
-            // 
-            // cbMaMon
-            // 
-            this.cbMaMon.FormattingEnabled = true;
-            this.cbMaMon.Items.AddRange(new object[] {
-            "IT2101"});
-            this.cbMaMon.Location = new System.Drawing.Point(113, 140);
-            this.cbMaMon.Name = "cbMaMon";
-            this.cbMaMon.Size = new System.Drawing.Size(166, 28);
-            this.cbMaMon.TabIndex = 26;
+            this.cbLopHocMonHoc.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLopHocMonHoc.FormattingEnabled = true;
+            this.cbLopHocMonHoc.Location = new System.Drawing.Point(102, 410);
+            this.cbLopHocMonHoc.Name = "cbLopHocMonHoc";
+            this.cbLopHocMonHoc.Size = new System.Drawing.Size(376, 25);
+            this.cbLopHocMonHoc.TabIndex = 29;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(420, 189);
+            this.label4.Location = new System.Drawing.Point(307, 251);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 27);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Giờ thi:";
+            this.label4.Size = new System.Drawing.Size(85, 27);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Ca thi:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(108, 189);
+            this.label3.Location = new System.Drawing.Point(97, 251);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 27);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Mã Lớp:";
+            this.label3.Size = new System.Drawing.Size(110, 27);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Ngày thi:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(420, 100);
+            this.label2.Location = new System.Drawing.Point(97, 370);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 27);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Tên lớp:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(108, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 27);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Mã môn:";
+            this.label2.Size = new System.Drawing.Size(213, 27);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Lớp học môn học:";
             // 
             // btExit
             // 
             this.btExit.BackColor = System.Drawing.Color.Blue;
             this.btExit.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btExit.Location = new System.Drawing.Point(364, 286);
+            this.btExit.Location = new System.Drawing.Point(822, 338);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(136, 92);
-            this.btExit.TabIndex = 31;
+            this.btExit.TabIndex = 25;
             this.btExit.Text = "Đóng";
             this.btExit.UseVisualStyleBackColor = false;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
@@ -163,29 +164,72 @@
             this.btConfirm.BackColor = System.Drawing.Color.Blue;
             this.btConfirm.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btConfirm.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btConfirm.Location = new System.Drawing.Point(198, 286);
+            this.btConfirm.Location = new System.Drawing.Point(822, 208);
             this.btConfirm.Name = "btConfirm";
             this.btConfirm.Size = new System.Drawing.Size(136, 92);
-            this.btConfirm.TabIndex = 30;
+            this.btConfirm.TabIndex = 24;
             this.btConfirm.Text = "Xác nhận";
             this.btConfirm.UseVisualStyleBackColor = false;
-            this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
+            this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(97, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 27);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Lich thi:";
+            // 
+            // txtLichThi
+            // 
+            this.txtLichThi.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLichThi.Location = new System.Drawing.Point(102, 155);
+            this.txtLichThi.Name = "txtLichThi";
+            this.txtLichThi.ReadOnly = true;
+            this.txtLichThi.Size = new System.Drawing.Size(166, 34);
+            this.txtLichThi.TabIndex = 35;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(307, 111);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(163, 27);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Thời gian thi:";
+            // 
+            // txtThoiGianThi
+            // 
+            this.txtThoiGianThi.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThoiGianThi.Location = new System.Drawing.Point(312, 151);
+            this.txtThoiGianThi.Name = "txtThoiGianThi";
+            this.txtThoiGianThi.Size = new System.Drawing.Size(166, 34);
+            this.txtThoiGianThi.TabIndex = 39;
             // 
             // EditScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 394);
-            this.Controls.Add(this.btExit);
-            this.Controls.Add(this.btConfirm);
+            this.ClientSize = new System.Drawing.Size(1018, 526);
+            this.Controls.Add(this.txtThoiGianThi);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtLichThi);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.rtxtQuyCheThi);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dateNgayThi);
-            this.Controls.Add(this.cbGioThi);
-            this.Controls.Add(this.cbMaLop);
-            this.Controls.Add(this.cbMaMon);
+            this.Controls.Add(this.cbCaThi);
+            this.Controls.Add(this.cbLopHocMonHoc);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btExit);
+            this.Controls.Add(this.btConfirm);
             this.Controls.Add(this.lbTittle);
             this.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
@@ -200,15 +244,19 @@
 
         #endregion
         private System.Windows.Forms.Label lbTittle;
+        private System.Windows.Forms.RichTextBox rtxtQuyCheThi;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateNgayThi;
-        private System.Windows.Forms.ComboBox cbGioThi;
-        private System.Windows.Forms.ComboBox cbMaLop;
-        private System.Windows.Forms.ComboBox cbMaMon;
+        private System.Windows.Forms.ComboBox cbCaThi;
+        private System.Windows.Forms.ComboBox cbLopHocMonHoc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Button btConfirm;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLichThi;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtThoiGianThi;
     }
 }

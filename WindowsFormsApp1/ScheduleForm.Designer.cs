@@ -1,4 +1,6 @@
-﻿namespace QuestionBank_GUI
+﻿using System.Drawing;
+
+namespace QuestionBank_GUI
 {
     partial class ScheduleForm
     {
@@ -28,52 +30,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbTittle = new System.Windows.Forms.Label();
-            this.txtMaMon = new System.Windows.Forms.TextBox();
-            this.txtTenMonHoc = new System.Windows.Forms.TextBox();
             this.txtMaLop = new System.Windows.Forms.TextBox();
-            this.btFind = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
-            this.listSchedule = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
+            this.btEdit = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxMaLop = new System.Windows.Forms.CheckBox();
+            this.checkBoxMaMon = new System.Windows.Forms.CheckBox();
+            this.checkBoxHocKy = new System.Windows.Forms.CheckBox();
+            this.cbHocKy = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMaMon = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(179, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã môn:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(507, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 27);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên lớp:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(832, 103);
+            this.label3.Location = new System.Drawing.Point(361, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 27);
             this.label3.TabIndex = 2;
@@ -93,53 +76,17 @@
             this.lbTittle.Text = "Danh sách lịch thi";
             this.lbTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtMaMon
-            // 
-            this.txtMaMon.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMon.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtMaMon.Location = new System.Drawing.Point(184, 157);
-            this.txtMaMon.Name = "txtMaMon";
-            this.txtMaMon.Size = new System.Drawing.Size(192, 34);
-            this.txtMaMon.TabIndex = 4;
-            this.txtMaMon.Text = "VD:T103GENG";
-            this.txtMaMon.Enter += new System.EventHandler(this.txtMaMon_Enter);
-            this.txtMaMon.Leave += new System.EventHandler(this.txtMaMon_Leave);
-            // 
-            // txtTenMonHoc
-            // 
-            this.txtTenMonHoc.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenMonHoc.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtTenMonHoc.Location = new System.Drawing.Point(512, 157);
-            this.txtTenMonHoc.Name = "txtTenMonHoc";
-            this.txtTenMonHoc.Size = new System.Drawing.Size(186, 34);
-            this.txtTenMonHoc.TabIndex = 5;
-            this.txtTenMonHoc.Text = "VD:Tiếng Anh";
-            this.txtTenMonHoc.Enter += new System.EventHandler(this.txtMaMon_Enter);
-            this.txtTenMonHoc.Leave += new System.EventHandler(this.txtMaMon_Leave);
-            // 
             // txtMaLop
             // 
             this.txtMaLop.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLop.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtMaLop.Location = new System.Drawing.Point(837, 157);
+            this.txtMaLop.Location = new System.Drawing.Point(468, 53);
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(167, 34);
+            this.txtMaLop.Size = new System.Drawing.Size(126, 34);
             this.txtMaLop.TabIndex = 6;
             this.txtMaLop.Text = "VD:IT2101";
             this.txtMaLop.Enter += new System.EventHandler(this.txtMaMon_Enter);
             this.txtMaLop.Leave += new System.EventHandler(this.txtMaMon_Leave);
-            // 
-            // btFind
-            // 
-            this.btFind.BackColor = System.Drawing.Color.Blue;
-            this.btFind.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btFind.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btFind.Location = new System.Drawing.Point(1031, 151);
-            this.btFind.Name = "btFind";
-            this.btFind.Size = new System.Drawing.Size(136, 44);
-            this.btFind.TabIndex = 7;
-            this.btFind.Text = "Tìm kiếm";
-            this.btFind.UseVisualStyleBackColor = false;
             // 
             // btAdd
             // 
@@ -167,67 +114,146 @@
             this.btDelete.UseVisualStyleBackColor = false;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
-            // listSchedule
+            // panel1
             // 
-            this.listSchedule.BackColor = System.Drawing.SystemColors.Window;
-            this.listSchedule.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.listSchedule.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listSchedule.FullRowSelect = true;
-            this.listSchedule.HideSelection = false;
-            this.listSchedule.Location = new System.Drawing.Point(184, 218);
-            this.listSchedule.Name = "listSchedule";
-            this.listSchedule.Size = new System.Drawing.Size(983, 366);
-            this.listSchedule.TabIndex = 10;
-            this.listSchedule.UseCompatibleStateImageBehavior = false;
-            this.listSchedule.View = System.Windows.Forms.View.Details;
-            this.listSchedule.DoubleClick += new System.EventHandler(this.listSchedule_DoubleClick);
+            this.panel1.Controls.Add(this.dataGridViewSchedule);
+            this.panel1.Location = new System.Drawing.Point(184, 252);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(983, 361);
+            this.panel1.TabIndex = 10;
             // 
-            // columnHeader1
+            // dataGridViewSchedule
             // 
-            this.columnHeader1.Text = "Mã môn học";
-            this.columnHeader1.Width = 203;
+            this.dataGridViewSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSchedule.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
+            this.dataGridViewSchedule.ReadOnly = true;
+            this.dataGridViewSchedule.RowHeadersWidth = 51;
+            this.dataGridViewSchedule.RowTemplate.Height = 24;
+            this.dataGridViewSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(980, 355);
+            this.dataGridViewSchedule.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Regular);
+            this.dataGridViewSchedule.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold); // Thiết lập font chữ cho header của DataGridView
+            this.dataGridViewSchedule.TabIndex = 0;
             // 
-            // columnHeader2
+            // btEdit
             // 
-            this.columnHeader2.Text = "Tên môn học";
-            this.columnHeader2.Width = 267;
+            this.btEdit.BackColor = System.Drawing.Color.Blue;
+            this.btEdit.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btEdit.Location = new System.Drawing.Point(523, 619);
+            this.btEdit.Name = "btEdit";
+            this.btEdit.Size = new System.Drawing.Size(136, 92);
+            this.btEdit.TabIndex = 12;
+            this.btEdit.Text = "Chỉnh sửa";
+            this.btEdit.UseVisualStyleBackColor = false;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
-            // columnHeader3
+            // groupBox1
             // 
-            this.columnHeader3.Text = "Mã Lớp học";
-            this.columnHeader3.Width = 206;
+            this.groupBox1.Controls.Add(this.checkBoxMaLop);
+            this.groupBox1.Controls.Add(this.checkBoxMaMon);
+            this.groupBox1.Controls.Add(this.checkBoxHocKy);
+            this.groupBox1.Controls.Add(this.cbHocKy);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtMaMon);
+            this.groupBox1.Controls.Add(this.txtMaLop);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(184, 126);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(983, 120);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tìm kiếm";
             // 
-            // columnHeader4
+            // checkBoxMaLop
             // 
-            this.columnHeader4.Text = "Ngày thi";
-            this.columnHeader4.Width = 192;
+            this.checkBoxMaLop.Checked = true;
+            this.checkBoxMaLop.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMaLop.Location = new System.Drawing.Point(600, 59);
+            this.checkBoxMaLop.Name = "checkBoxMaLop";
+            this.checkBoxMaLop.Size = new System.Drawing.Size(18, 27);
+            this.checkBoxMaLop.TabIndex = 11;
+            this.checkBoxMaLop.UseVisualStyleBackColor = true;
             // 
-            // columnHeader5
+            // checkBoxMaMon
             // 
-            this.columnHeader5.Text = "Giờ thi";
-            this.columnHeader5.Width = 111;
+            this.checkBoxMaMon.Checked = true;
+            this.checkBoxMaMon.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMaMon.Location = new System.Drawing.Point(947, 60);
+            this.checkBoxMaMon.Name = "checkBoxMaMon";
+            this.checkBoxMaMon.Size = new System.Drawing.Size(18, 27);
+            this.checkBoxMaMon.TabIndex = 10;
+            this.checkBoxMaMon.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxHocKy
+            // 
+            this.checkBoxHocKy.Checked = true;
+            this.checkBoxHocKy.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxHocKy.Location = new System.Drawing.Point(308, 58);
+            this.checkBoxHocKy.Name = "checkBoxHocKy";
+            this.checkBoxHocKy.Size = new System.Drawing.Size(18, 27);
+            this.checkBoxHocKy.TabIndex = 9;
+            this.checkBoxHocKy.UseVisualStyleBackColor = true;
+            // 
+            // cbHocKy
+            // 
+            this.cbHocKy.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHocKy.FormattingEnabled = true;
+            this.cbHocKy.Location = new System.Drawing.Point(102, 51);
+            this.cbHocKy.Name = "cbHocKy";
+            this.cbHocKy.Size = new System.Drawing.Size(200, 34);
+            this.cbHocKy.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(6, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 27);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Học kỳ:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(638, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 27);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã môn:";
+            // 
+            // txtMaMon
+            // 
+            this.txtMaMon.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMon.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtMaMon.Location = new System.Drawing.Point(749, 52);
+            this.txtMaMon.Name = "txtMaMon";
+            this.txtMaMon.Size = new System.Drawing.Size(192, 34);
+            this.txtMaMon.TabIndex = 4;
+            this.txtMaMon.Text = "VD:T103GENG";
+            this.txtMaMon.Enter += new System.EventHandler(this.txtMaMon_Enter);
+            this.txtMaMon.Leave += new System.EventHandler(this.txtMaMon_Leave);
             // 
             // ScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 745);
-            this.Controls.Add(this.listSchedule);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btEdit);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.btFind);
-            this.Controls.Add(this.txtMaLop);
-            this.Controls.Add(this.txtTenMonHoc);
-            this.Controls.Add(this.txtMaMon);
             this.Controls.Add(this.lbTittle);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkGray;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -236,28 +262,30 @@
             this.Text = "ScheduleForm";
             this.Load += new System.EventHandler(this.ScheduleForm_Load);
             this.Leave += new System.EventHandler(this.txtMaMon_Leave);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbTittle;
-        private System.Windows.Forms.TextBox txtMaMon;
-        private System.Windows.Forms.TextBox txtTenMonHoc;
         private System.Windows.Forms.TextBox txtMaLop;
-        private System.Windows.Forms.Button btFind;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button btDelete;
-        private System.Windows.Forms.ListView listSchedule;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridViewSchedule;
+        private System.Windows.Forms.Button btEdit;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMaMon;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbHocKy;
+        private System.Windows.Forms.CheckBox checkBoxHocKy;
+        private System.Windows.Forms.CheckBox checkBoxMaLop;
+        private System.Windows.Forms.CheckBox checkBoxMaMon;
     }
 }
